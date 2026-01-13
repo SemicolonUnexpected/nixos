@@ -6,6 +6,11 @@
      gcc
      cmake
      go
+     tmux
+     starship
+     gnumake
+     lua
+     nodejs
    ];
 }
 

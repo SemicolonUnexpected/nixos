@@ -2,6 +2,8 @@
 
 {
    environment.systemPackages = with pkgs; [
+     hyprpaper
+     hyprlock
      alacritty
      firefox
      grim
@@ -10,4 +12,9 @@
      brightnessctl
      wl-clipboard
    ];
+
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+    nerd-fonts.jetbrains-mono
+  ];
 }
