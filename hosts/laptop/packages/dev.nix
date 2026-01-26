@@ -11,6 +11,7 @@
      gnumake
      lua
      nodejs
+     fastfetch
    ];
 }
 
