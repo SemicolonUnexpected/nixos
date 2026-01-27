@@ -5,6 +5,10 @@
      hyprpaper
      hyprlock
      hypridle
+     hyprcursor
+     # hyprshutdown
+     hyprpolkitagent
+
      alacritty
      firefox
      grim
@@ -13,6 +17,7 @@
      brightnessctl
      wl-clipboard
      tofi
+     whitesur-cursors
 
      gimp
      inkscape
