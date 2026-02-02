@@ -1,4 +1,6 @@
 { pkgs, ... }: {
+  programs.hyprland.enable = true;
+
   hjem.users.mgrac.packages = with pkgs; [
     hyprpaper
     hyprlock
@@ -41,8 +43,6 @@
     nerd-fonts.jetbrains-mono
     carlito
   ];
-
-  programs.hyprland.enable = true;
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
