@@ -1,0 +1,40 @@
+[font]
+size = 14
+
+[font.normal]
+family = "JetBrainsMonoNerdFontMono"
+style = "Regular"
+
+[font.bold]
+style = "Bold"
+
+[font.bold_italic]
+style = "Bold Italic"
+
+[font.italic]
+style = "Italic"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = false
+
+[window]
+opacity = 1
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 7
+y = 7
+
+[terminal.shell]
+program = "tmux"
+args = ["new-session", "-A", "-s", "main"]
+
+[general]
+import = ["~/.config/alacritty/nightfly.toml"]

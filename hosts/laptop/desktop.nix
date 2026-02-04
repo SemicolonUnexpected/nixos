@@ -1,42 +1,34 @@
 { pkgs, ... }: {
   programs.hyprland.enable = true;
 
-  hjem.users.mgrac.packages = with pkgs; [
-    hyprpaper
-    hyprlock
-    hypridle
-    hyprcursor
-    # hyprshutdown
-    hyprpolkitagent
+  hjem.users.mgrac.packages = with pkgs;
+    [
+      hyprpaper
+      hyprlock
+      hypridle
+      hyprcursor
+      hyprpolkitagent
+      wl-clipboard
+      whitesur-cursors
 
-    alacritty
-    firefox
-    grim
-    slurp
-    mako
-    brightnessctl
-    wl-clipboard
-    tofi
-    whitesur-cursors
+      alacritty
+      gimp
+      inkscape
+      logseq
+      firefox
 
-    gimp
-    inkscape
-    logseq
+      mako
+      libnotify
+      brightnessctl
+      bluez
+      tofi
+      grim
+      slurp
 
-    python3
-    gcc
-    clang
-    clang-tools
-    cmake
-    fzf
-    go
-    tmux
-    starship
-    gnumake
-    lua
-    nodejs
-    fastfetch
-  ];
+      tmux
+      starship
+      fastfetch
+    ] ++ (import ./editor.nix { inherit pkgs; });
 
   fonts.packages = with pkgs; [
     jetbrains-mono

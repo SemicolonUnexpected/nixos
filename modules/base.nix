@@ -1,10 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # networking.hostName = "nixos"; # Define your hostname.
 
@@ -21,6 +18,17 @@
     # font = "Lat2-Terminus16";
     keyMap = "uk";
     # useXkbConfig = true; # use xkb.options in tty.
+  };
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+
+  nix.optimise = {
+    automatic = true;
+    dates = [ "weekly" ];
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,

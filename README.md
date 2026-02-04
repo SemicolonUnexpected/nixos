@@ -1,2 +1,3 @@
-# nixos
-NixOS configuration
+# Nixos
+
+NixOS configuration and dotfiles

@@ -1,0 +1,112 @@
+#
+### Fonts
+#
+	font = "JetBrainsMono"
+	font-size = 15
+	font-features = ""
+	font-variations = ""
+	hint-font = true
+
+#
+### Text theming
+#
+	text-color = FAFAFA
+	prompt-background = #00000000
+	prompt-background-padding = 0
+	prompt-background-corner-radius = 0
+
+	# Placeholder text theme
+	placeholder-color = #FFFFFFA8
+	placeholder-background = #00000000
+	placeholder-background-padding = 0
+	placeholder-background-corner-radius = 0
+
+	# Input text theme
+	# input-color = #FFFFFF
+	input-background = 00000000
+	input-background-padding = 0
+	input-background-corner-radius = 0
+
+	# Default result text theme
+	# default-result-color = #FFFFFF
+	default-result-background = #00000000
+	default-result-background-padding = 0
+	default-result-background-corner-radius = 0
+
+	# Selection text
+	selection-color = #7FDBCA
+	selection-background = #00000000
+	selection-background-padding = 0
+	selection-background-corner-radius = 0
+
+	# Matching portion of selection text
+	selection-match-color = #00000000
+
+#
+### Text cursor theme
+#
+
+#
+### Text layout
+#
+	prompt-text = "> "
+	prompt-padding = 0
+	placeholder-text = ""
+	num-results = 0
+	result-spacing = 0
+	horizontal = false
+	min-input-width = 0
+
+#
+### Window theming
+#
+	width = 768
+	height = 512
+	background-color = 001522EE
+	outline-width = 0
+	outline-color = 080800
+	border-width = 2
+	border-color = ACB4C2
+	corner-radius = 5
+	padding-top = 10
+	padding-bottom = 10
+	padding-left = 10
+	padding-right = 10
+	clip-to-padding = true
+	scale = true
+
+#
+### Window positioning
+#
+	output = ""
+	anchor = center
+	exclusive-zone = -1
+	margin-top = 0
+	margin-bottom = 0
+	margin-left = 0
+	margin-right = 0
+
+#
+### Behaviour
+#
+	hide-cursor = false
+	text-cursor = false
+	history = true
+	matching-algorithm = normal
+	require-match = true
+	auto-accept-single = false
+	hide-input = false
+	hidden-character = "*"
+	physical-keybindings = true
+	print-index = false
+	drun-launch = true
+	late-keyboard-init = false
+	multi-instance = false
+	ascii-input = false
+
+#
+### Inclusion
+#
+	# Configs can be split between multiple files, and then included
+	# within each other.
+	# include = /path/to/config
