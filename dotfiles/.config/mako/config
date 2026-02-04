@@ -5,7 +5,7 @@
 # overridden in a criteria section.
 
 # Position of the notification window on the screen.
-# Options: top-right, top-center, top-left, bottom-right, bottom-center, bottom-left, center
+# ptions: top-right, top-center, top-left, bottom-right, bottom-center, bottom-left, center
 anchor=top-right
 
 # output=eDP-1

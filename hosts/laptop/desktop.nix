@@ -1,7 +1,9 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.hyprland.enable = true;
 
-  hjem.users.mgrac.packages = with pkgs;
+  hjem.users.mgrac.packages =
+    with pkgs;
     [
       hyprpaper
       hyprlock
@@ -28,7 +30,8 @@
       tmux
       starship
       fastfetch
-    ] ++ (import ./editor.nix { inherit pkgs; });
+    ]
+    ++ (import ./editor.nix { inherit pkgs; });
 
   fonts.packages = with pkgs; [
     jetbrains-mono
@@ -38,13 +41,15 @@
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  programs.dconf.profiles.user.databases = [{
-    settings."org/gnome/desktop/interface" = {
-      gtk-theme = "Adwaita";
-      icon-theme = "Flat-Remix-Red-Dark";
-      font-name = "Noto Sans Medium 11";
-      document-font-name = "Noto Sans Medium 11";
-      monospace-font-name = "Noto Sans Mono Medium 11";
-    };
-  }];
+  programs.dconf.profiles.user.databases = [
+    {
+      settings."org/gnome/desktop/interface" = {
+        gtk-theme = "Adwaita";
+        icon-theme = "Flat-Remix-Red-Dark";
+        font-name = "Noto Sans Medium 11";
+        document-font-name = "Noto Sans Medium 11";
+        monospace-font-name = "Noto Sans Mono Medium 11";
+      };
+    }
+  ];
 }

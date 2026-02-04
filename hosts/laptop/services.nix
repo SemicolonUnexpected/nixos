@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   services.hypridle.enable = true;
 
   services.pipewire.enable = true;
