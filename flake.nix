@@ -9,13 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hjem-impure = {
-      url = "github:Rexcrazy804/hjem-impure";
-
-      # Disable internal tests
-      inputs.nixpkgs.follows = "";
-      inputs.hjem.follows = "";
-    };
   };
 
   outputs =
