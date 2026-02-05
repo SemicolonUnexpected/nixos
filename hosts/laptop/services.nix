@@ -6,6 +6,8 @@
   services.pipewire.pulse.enable = true;
   services.pipewire.alsa.enable = true;
 
+  services.blueman.enable = true;
+
   services.openssh.enable = true;
 
   services.syncthing = {
