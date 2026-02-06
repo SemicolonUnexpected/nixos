@@ -15,4 +15,6 @@ with pkgs;
 
   typst
   tinymist
+
+  bash-language-server
 ]
