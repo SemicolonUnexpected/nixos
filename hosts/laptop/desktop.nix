@@ -18,6 +18,7 @@
       inkscape
       logseq
       firefox
+      docker
 
       mako
       libnotify
@@ -30,6 +31,10 @@
       tmux
       starship
       fastfetch
+      htop
+
+      openssh
+      sshfs
     ]
     ++ (import ./editor.nix { inherit pkgs; });
 
@@ -50,6 +55,13 @@
         document-font-name = "Noto Sans Medium 11";
         monospace-font-name = "Noto Sans Mono Medium 11";
       };
+    }
+  ];
+
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024; # 16GB swap file
     }
   ];
 }

@@ -11,6 +11,8 @@ return {
     vim.lsp.enable('lua_ls')
     vim.lsp.enable('clangd')
     vim.lsp.enable('bash_ls')
+    vim.lsp.enable('hls')
+    vim.lsp.enable('tinymist')
 
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),

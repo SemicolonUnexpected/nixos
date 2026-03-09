@@ -36,4 +36,4 @@ export TOKEN="$(cat ~/keys/token)"
 # export PICO_SDK_PATH=$HOME/pico/pico-sdk
 
 # Vim as manpager
-export MANPAGER='sh -c "col -bx | vim -R -c \"set ft=man nomod nolist nonu\" -c \"runtime! macros/less.vim\" -"'
+# export MANPAGER='sh -c "col -bx | vim -R -c \"set ft=man nomod nolist nonu\" -c \"runtime! macros/less.vim\" -"'

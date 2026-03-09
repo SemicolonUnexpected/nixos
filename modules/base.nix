@@ -1,7 +1,15 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
+  nix.registry.n.to = {
+    type = "indirect";
+    id = "nixpkgs";
+  };
 
   # networking.hostName = "nixos"; # Define your hostname.
 
