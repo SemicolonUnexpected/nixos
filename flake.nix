@@ -8,6 +8,11 @@
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -27,8 +32,8 @@
           ./modules/users.nix
           ./modules/packages.nix
 
-          # Tell the flake how to handle hjem
           inputs.hjem.nixosModules.default
+          inputs.nvf.nixosModules.default
         ];
       };
     };
