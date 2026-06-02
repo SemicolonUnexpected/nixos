@@ -5,6 +5,13 @@
 
     settings = {
       vim = {
+        # Options
+        options = {
+          wrap = false;
+          list = true;
+          listchars = "tab:» ,trail:·,nbsp:␣,extends:→,precedes:←";
+        };
+
         # Mappings
         vendoredKeymaps.enable = false;
 

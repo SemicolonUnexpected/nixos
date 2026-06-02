@@ -4,6 +4,8 @@
     ./editor.nix
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   programs.hyprland.enable = true;
 
   hjem.users.mgrac.packages = with pkgs; [
@@ -21,6 +23,8 @@
     logseq
     firefox
     docker
+    android-studio
+    unityhub
 
     mako
     libnotify
