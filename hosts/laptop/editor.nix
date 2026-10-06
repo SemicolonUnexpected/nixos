@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.nvf = {
     enable = true;
 
@@ -11,6 +10,7 @@
           list = true;
           listchars = "tab:» ,trail:·,nbsp:␣,extends:→,precedes:←";
         };
+        searchCase = "smart";
 
         # Mappings
         vendoredKeymaps.enable = false;
@@ -49,20 +49,35 @@
             silent = true;
             desc = "Open Oil file manager";
           }
+
+          {
+            key = "<leader>f";
+            mode = "n";
+            action = ":lua require('conform').format({fallback = 'lsp_format'})";
+            silent = true;
+            desc = "Format the current buffer";
+          }
         ];
 
         # LSP
-        autocomplete.nvim-cmp.enable = true;
+        autocomplete.blink-cmp.friendly-snippets.enable = true;
 
         lsp = {
           enable = true;
           mappings = {
             codeAction = "<leader>ca";
-            format = "<leader>f";
             goToDeclaration = "gD";
             goToDefinition = "gd";
             listReferences = "gr";
             renameSymbol = "<leader>rn";
+          };
+        };
+
+        formatter.conform-nvim = {
+          enable = true;
+          setupOpts.format_on_save = {
+            lsp_format = "fallback";
+            timeout_ms = 500;
           };
         };
 
@@ -76,6 +91,9 @@
           typst.enable = true;
           lua.enable = true;
           bash.enable = true;
+          python.enable = true;
+          dart.enable = true;
+          java.enable = true;
         };
 
         # Navigation
@@ -86,7 +104,16 @@
         };
 
         utility.sleuth.enable = true;
-        utility.oil-nvim.enable = true;
+
+        utility.oil-nvim = {
+          enable = true;
+
+          setupOpts = {
+            columns = [
+              "permissions"
+            ];
+          };
+        };
 
         # Theming
         theme.enable = false;
@@ -97,7 +124,6 @@
             setup = "vim.cmd('colorscheme nightfly')";
           };
         };
-
       };
     };
   };

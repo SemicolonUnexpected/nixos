@@ -14,8 +14,18 @@
     hypridle
     hyprcursor
     hyprpolkitagent
+    hyprpicker
     wl-clipboard
     whitesur-cursors
+
+    mako
+    libnotify
+    brightnessctl
+    bluez
+    impala
+    tofi
+    grim
+    slurp
 
     alacritty
     gimp
@@ -25,14 +35,8 @@
     docker
     android-studio
     unityhub
-
-    mako
-    libnotify
-    brightnessctl
-    bluez
-    tofi
-    grim
-    slurp
+    rpi-imager
+    kicad
 
     tmux
     starship
@@ -42,6 +46,7 @@
 
     openssh
     sshfs
+    anki
   ];
 
   fonts.packages = with pkgs; [
@@ -64,10 +69,14 @@
     }
   ];
 
+  boot.initrd.systemd.enable = true;
+
   swapDevices = [
     {
       device = "/var/lib/swapfile";
       size = 16 * 1024; # 16GB swap file
     }
   ];
+
+  powerManagement.enable = true;
 }
