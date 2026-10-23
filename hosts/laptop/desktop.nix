@@ -1,7 +1,6 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
-    ./editor.nix
+    ./editor
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -37,16 +36,16 @@
     unityhub
     rpi-imager
     kicad
+    anki
+    orca-slicer
 
     tmux
     starship
     fastfetch
     htop
-    fzf
-
     openssh
     sshfs
-    anki
+    fzf
   ];
 
   fonts.packages = with pkgs; [

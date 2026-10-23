@@ -20,16 +20,7 @@
         };
 
         utility.sleuth.enable = true;
-
-        utility.oil-nvim = {
-          enable = true;
-
-          setupOpts = {
-            columns = [
-              "permissions"
-            ];
-          };
-        };
+        visuals.nvim-web-devicons.enable = true;
 
         # Theming
         theme.enable = false;
