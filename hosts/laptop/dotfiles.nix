@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   hjem.users.mgrac = {
     directory = "/home/mgrac/";
     files = {
@@ -16,6 +15,7 @@
       ".bashrc".source = ../../dotfiles/.bashrc;
       ".bash_profile".source = ../../dotfiles/.bash_profile;
       ".bash_logout".source = ../../dotfiles/.bash_logout;
+      ".ssh/config".source = ../../dotfiles/.ssh/config;
     };
   };
 }

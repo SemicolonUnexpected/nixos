@@ -1,20 +1,29 @@
-{ ... }:
-{
-  # services.hypridle.enable = true;
+_: {
+  services = {
+    # services.hypridle.enable = true;
 
-  services.pipewire.enable = true;
-  services.pipewire.pulse.enable = true;
-  services.pipewire.alsa.enable = true;
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+      alsa.enable = true;
+    };
 
-  services.blueman.enable = true;
+    blueman.enable = true;
 
-  services.openssh.enable = true;
+    openssh.enable = true;
 
-  services.syncthing = {
+    syncthing = {
+      enable = true;
+      user = "mgrac";
+      dataDir = "/home/mgrac";
+      configDir = "/home/mgrac/.config/syncthing";
+      openDefaultPorts = true;
+    };
+  };
+
+  virtualisation.podman = {
     enable = true;
-    user = "mgrac";
-    dataDir = "/home/mgrac";
-    configDir = "/home/mgrac/.config/syncthing";
-    openDefaultPorts = true;
+    dockerCompat = true; # Creates a symlink from docker to podman
+    defaultNetwork.settings.dns_enabled = true; # Required for containers under podman-compose to be able to talk to each other.
   };
 }

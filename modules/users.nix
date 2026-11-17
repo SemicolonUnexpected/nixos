@@ -1,4 +1,4 @@
-{...}: {
+_: {
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mgrac = {
     isNormalUser = true;
@@ -6,6 +6,7 @@
       "wheel"
       "networkmanager"
       "fuse"
+      "podman"
     ]; # Enable ‘sudo’ for the user.
   };
 

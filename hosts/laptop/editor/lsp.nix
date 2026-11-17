@@ -29,6 +29,8 @@ _: {
         format = "<leader>f";
         toggleFormatOnSave = null;
       };
+
+      servers.nil.settings.nil.nix.flake.autoArchive = false;
     };
 
     languages = {
